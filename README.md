@@ -391,6 +391,16 @@ CC-BY 3.0 : 一般公開／リミックス可
 
 ## More info ／ さらなる情報
 
+### Beziex_Op の技術資料
+
+Beziex_Op 自身の技術資料です。
+
+#### Qiita
+
+<a href="https://qiita.com/beziex/items/ab1c87918892338eb8df">Qiita：OpenTK でテッセレーションして、曲面パッチ間が滑らかに繋がった物体を表示</a>
+
+<br>
+
 ### 間接的な技術資料
 
 下記は、WebGL にて「Instance geometry アルゴリズム」を実装したプログラムに関する資料です。<br>
