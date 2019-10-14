@@ -107,7 +107,8 @@ Beziex_Op は、Visual Studio 2019 を使います。お持ちでない場合は
 
 ## Building & Run ／ビルドと実行
 
-Visual Studio 2019 を起動し、ビルド＆実行してください。Beziex_Op は複数のサードパーティ製ライブラリを使用していますが、ビルドの際 自動的に Nuget されると思います。
+まず Visual Studio 2019 を起動し、Beziex_Op\Beziex_Op.sln を開きます。<br>
+そしてビルド＆実行してください。Beziex_Op は複数のサードパーティ製ライブラリを使用していますが、ビルドの際 自動的に Nuget されると思います。
 
 <br>
 
