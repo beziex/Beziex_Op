@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88C10F1C-E2BA-461C-8F53-609481D4D3F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Beziex_Op</RootNamespace>
+    <AssemblyName>BxOpenTk</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OpenTK.3.1.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\BxGlMain.cs" />
+    <Compile Include="src\BxGlMainBase.cs" />
+    <Compile Include="src\BxGlProgContainer.cs" />
+    <Compile Include="src_GL3\BxGlProgGL3_Face.cs" />
+    <Compile Include="src_GL3\BxGlProgGL3_Wire.cs" />
+    <Compile Include="src\BxGlProgramBase.cs" />
+    <Compile Include="src\BxGlRoot.cs" />
+    <Compile Include="src_GL3\BxGlShadeGL3.cs" />
+    <Compile Include="src\BxGlShaderBase.cs" />
+    <Compile Include="src_GL3\BxGlShadeGL3_Face.cs" />
+    <Compile Include="src_GL3\BxGlShadeGL3_Wire.cs" />
+    <Compile Include="src_Vbo1\BxGlProgVbo1_Face.cs" />
+    <Compile Include="src_Vbo1\BxGlProgVbo1_Wire.cs" />
+    <Compile Include="src_Vbo1\BxGlShadeVbo1.cs" />
+    <Compile Include="src_Vbo1\BxGlShadeVbo1_Face.cs" />
+    <Compile Include="src_Vbo1\BxGlShadeVbo1_Wire.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BxModule\BxComModule\BxComModule.csproj">
+      <Project>{3c09638c-f71c-4cbe-a65d-30572de2870f}</Project>
+      <Name>BxComModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BxComService\BxComService.csproj">
+      <Project>{c84df4a6-389f-426a-8f26-e5e1854e67b1}</Project>
+      <Name>BxComService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="shaderGL3\bxViewGL3.frag" />
+    <None Include="shaderGL3\bxViewGL3.vert" />
+    <None Include="shaderGL3\bxViewGL3_Wire.frag" />
+    <None Include="shaderVbo1\bxViewVbo1.frag" />
+    <None Include="shaderVbo1\bxViewVbo1.geom" />
+    <None Include="shaderVbo1\bxViewVbo1.tesc" />
+    <None Include="shaderVbo1\bxViewVbo1.tese" />
+    <None Include="shaderVbo1\bxViewVbo1.vert" />
+    <None Include="shaderVbo1\bxViewVbo1_Wire.frag" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
