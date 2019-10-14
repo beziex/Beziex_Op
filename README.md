@@ -93,7 +93,7 @@ OpenGL4 がサポートされた Windows PC (64bit) でのみ動作します。.
 
 既にこの README.md を、下記 URL の github 上でご覧になっていると思います。まずは一式を Clone もしくはダウンロードしてください。
 
-<a href="https://github.com/beziex/priv-Beziex_Op">beziex/Beziex_Op [github] :  (https://github.com/beziex/priv-Beziex_Op)</a>
+<a href="https://github.com/beziex/Beziex_Op">beziex/Beziex_Op [github] :  (https://github.com/beziex/Beziex_Op)</a>
 
 <br>
 
